@@ -15,14 +15,14 @@ public class PlayerController : MonoBehaviour {
     void Update() {
         // Hàm này được gọi mỗi khung hình
 
-        HandleForwardMovement();
+        //HandleForwardMovement();
         HandleHorizontalMovement();
     }
 
-    private void HandleForwardMovement() {
-        // Luôn di chuyển Player về phía trước (trục Z)
-        transform.Translate(Vector3.forward * forwardSpeed * Time.deltaTime);
-    }
+    //private void HandleForwardMovement() {
+    //    // Luôn di chuyển Player về phía trước (trục Z)
+    //    transform.Translate(Vector3.forward * forwardSpeed * Time.deltaTime);
+    //}
 
     private void HandleHorizontalMovement() {
         // Kiểm tra nếu người dùng đang nhấn và giữ chuột trái

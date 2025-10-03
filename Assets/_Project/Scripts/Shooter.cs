@@ -26,7 +26,11 @@ public class Shooter : MonoBehaviour {
     void Shoot() {
         if (virusPrefab != null && spawnPoint != null)
         {
-            Instantiate(virusPrefab, spawnPoint.position, spawnPoint.rotation);
+            // Nhân bản ra một virus mới
+            GameObject newVirus = Instantiate(virusPrefab, spawnPoint.position, spawnPoint.rotation);
+
+            // Báo cáo virus mới này cho CrowdManager để thêm vào danh sách
+            CrowdManager.instance.AddVirus(newVirus);
         } else
         {
             Debug.LogWarning("Virus Prefab or Spawn Point has not been assigned!");
